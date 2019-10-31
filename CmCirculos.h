@@ -9,15 +9,15 @@
 
 class CmCirculos {
 private:
-    sf::RenderWindow *palCanvas= nullptr;
-    vector<CCirculo> v;
+	sf::RenderWindow *palCanvas= nullptr;
+	vector<CCirculo> v;
 public:
-  CmCirculos(sf::RenderWindow *_palCanvas, size_t n);
-  ~CmCirculos();
-  void mostrarCirculos();
-  void moverCirculos();
+	CmCirculos(sf::RenderWindow *_palCanvas, size_t n);
+	~CmCirculos();
+	void mostrarCirculos();
+	void moverCirculos();
 
-  vector<CCirculo> getVectordeCirculos(){ return v;}
+	vector<CCirculo> getVectordeCirculos(){ return v;}
 };
 
 
