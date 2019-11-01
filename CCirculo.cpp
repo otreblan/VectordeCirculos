@@ -16,7 +16,7 @@ CCirculo::CCirculo(
 		posY(_posY),
 		desX(_desX),
 		desY(_desY),
-		color(_color){} 
+		color(_color){}
 
 void CCirculo::Muestrate()
 {
@@ -31,13 +31,13 @@ void CCirculo::Muestrate()
 void CCirculo::Muevete()
 {
 	if( posX + desX + 2*radio > palCanvas->getSize().x)
-	 desX = desX*(-1);
+		desX = desX*(-1);
 	if( posX + desX < 0)
-	desX = desX*(-1);
+		desX = desX*(-1);
 	if( posY + desY + 2*radio > palCanvas->getSize().y)
-	 desY = desY*(-1);
+		 desY = desY*(-1);
 	if( posY + desY < 0)
-	desY = desY*(-1);
-	posX += desX;
-	posY += desY;
+		desY = desY*(-1);
+		posX += desX;
+		posY += desY;
 }

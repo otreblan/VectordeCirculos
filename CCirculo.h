@@ -18,8 +18,18 @@ private:
 	tnumeroReal  desY;
 	sf::Color color;
 public:
-	CCirculo( sf::RenderWindow *_palCanvas,tnumeroReal _radio, tnumeroReal _posX, tnumeroReal _posY,
-			  tnumeroReal _desX, tnumeroReal _desY, sf::Color _color);
+	CCirculo(){};
+	CCirculo(const CCirculo & Copia):
+		palCanvas(Copia.palCanvas),
+		radio(Copia.radio),
+		posX(Copia.posX),
+		posY(Copia.posY),
+		desX(Copia.desX),
+		desY(Copia.desY)
+		{
+		};
+	CCirculo( sf::RenderWindow *_palCanvas, tnumeroReal _radio, tnumeroReal _posX, tnumeroReal _posY,
+		tnumeroReal _desX, tnumeroReal _desY, sf::Color _color);
 	virtual ~CCirculo(){};
 	void Muestrate();
 	void Muevete();
@@ -41,6 +51,7 @@ public:
 
 	void setColor(sf::Color _color) { color = _color;}
 	sf::Color getColor(){ return color;}
+
 };
 
 

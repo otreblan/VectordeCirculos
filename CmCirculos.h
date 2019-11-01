@@ -11,6 +11,8 @@ class CmCirculos {
 private:
 	sf::RenderWindow *palCanvas= nullptr;
 	vector<CCirculo> v;
+	CCirculo *cirArr;
+	size_t size;
 public:
 	CmCirculos(sf::RenderWindow *_palCanvas, size_t n);
 	~CmCirculos();
